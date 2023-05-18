@@ -3,6 +3,7 @@
   <head>
  <title>Mood Tracker</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <header class="bg-gray-800 text-white py-4">
@@ -28,23 +29,14 @@
             <option value="other">Other</option>
           </select>
         </div>
-        <div class="mb-4">
-          <label class="block text-gray-700 font-bold mb-2" for="notes">
-            Notes
-          </label>
-          <textarea class="border border-gray-400 p-2 rounded w-full" id="notes"></textarea>
-        </div>
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">
-          Save
-        </button>
       </form>
       <div class="mt-8" id="activity-suggestions"></div>
     </main>
     <footer class="bg-gray-800 text-white py-4">
       <div class="container mx-auto px-4">
-        <p class="text-center">&copy; 2021 Mood Tracker</p>
+        <p class="text-center">&copy; 2023 PLP Mood Tracker</p>
       </div>
     </footer>
-    <script src="app.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
