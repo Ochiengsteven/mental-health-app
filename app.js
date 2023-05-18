@@ -1,6 +1,63 @@
 const moodSelect = document.getElementById('mood');
 const notesInput = document.getElementById('notes');
 const activitySuggestions = document.getElementById('activity-suggestions');
+const suggestions = {
+    happy: [
+        "Spend time in nature: Spending time outdoors can be calming and rejuvenating. Take a hike, go for a bike ride, or simply sit outside and enjoy the fresh air.",
+        "Get creative: Engage in a creative activity, such as painting, writing, or playing music.",
+        "Try some new activity: Take a cooking class, learn a new language, or try a new hobby.",
+        "Relax and unwind: Take a bubble bath, read a book, or watch a movie.",
+    ],
+    sad: [
+        "Listen to your favorite music.",
+        "Practice self-care: Take a warm bath, get a massage, or do something else that makes you feel relaxed and pampered.",
+        "Exercise: Physical activity can help release endorphins, which are natural mood boosters. Go for a walk, run, or do some yoga.",
+        "Connect with others: Reach out to a friend or family member and talk about how you're feeling. Social support can be a powerful tool in improving mood.",
+        "Engage in a hobby: Do something you enjoy, such as painting, playing music, or reading a book.",
+        "Practice mindfulness: Try meditation or deep breathing exercises to help calm your mind and reduce stress.",
+        "Volunteer: Helping others can be a great way to boost your mood and feel a sense of purpose.",
+        "Get outside: Spending time in nature can be calming and rejuvenating. Take a hike, go for a bike ride, or simply sit outside and enjoy the fresh air."
+    ],
+    anxious: [
+        "Practice deep breathing: Take slow, deep breaths in through your nose and out through your mouth. This can help slow down your heart rate and reduce feelings of anxiety.",
+        "Write in a journal: Writing down your thoughts and feelings can help you process them and gain perspective.",
+        "Listen to calming music: Listening to soothing music can help reduce feelings of anxiety and promote relaxation.",
+        "Get organized: Create a to-do list or organize your space to help reduce feelings of overwhelm and promote a sense of control.",
+    ],
+    angry: [
+        "Take a break: If possible, remove yourself from the situation that is causing your anger. Take a walk, go for a drive, or simply step outside for some fresh air.",
+        "Use positive self-talk: Remind yourself that it's okay to feel angry, but that you have the power to control your emotions and respond in a healthy way.",
+        "Talk to someone: Reach out to a friend or family member and talk about how you're feeling. Social support can be a powerful tool in managing anger.",
+        "Writing down your thoughts and feelings can help you process them and gain perspective.",
+    ],
+    stressed: [
+        "Practice deep breathing: Take slow, deep breaths in through your nose and out through your mouth. This can help calm your mind and reduce feelings of stress.",
+        "Connect with others: Reach out to a friend or family member and talk about how you're feeling. Social support can be a powerful tool in reducing stress.",
+    ],
+    tired: [
+        "Take a nap: If possible, take a short nap to help you feel more rested and refreshed.",
+        "Listen to upbeat music: Listening to music with a fast tempo can help boost your energy levels and improve your mood.",
+        "Take a break: If possible, take a break from work or other responsibilities to give yourself time to rest and recharge.",
+    ],
+    excited: [
+        "Spend time in nature: Spending time outdoors can be calming and rejuvenating. Take a hike, go for a bike ride, or simply sit outside and enjoy the fresh air.",
+        "Get creative: Engage in a creative activity, such as painting, writing, or playing music.",
+        "Take a break: If possible, take a break from work or other responsibilities to give yourself time to rest and recharge.",
+        "Relax and unwind: Take a bubble bath, read a book, or watch a movie.",
+    ],
+    content: [
+        "Spend time in nature: Spending time outdoors can be calming and rejuvenating. Take a hike, go for a bike ride, or simply sit outside and enjoy the fresh air.",
+        "Get creative: Engage in a creative activity, such as painting, writing, or playing music.",
+        "Try some new activity: Take a cooking class, learn a new language, or try a new hobby.",
+        "Relax and unwind: Take a bubble bath, read a book, or watch a movie.",
+    ],
+    other: [
+        "Spend time in nature: Spending time outdoors can be calming and rejuvenating. Take a hike, go for a bike ride, or simply sit outside and enjoy the fresh air.",
+        "Get creative: Engage in a creative activity, such as painting, writing, or playing music.",
+        "Try some new activity: Take a cooking class, learn a new language, or try a new hobby.",
+        "Relax and unwind: Take a bubble bath, read a book, or watch a movie.",
+    ],
+};
 
 moodSelect.addEventListener('change', () => {
   const mood = moodSelect.value;
@@ -8,35 +65,46 @@ moodSelect.addEventListener('change', () => {
 
   switch (mood) {
     case 'happy':
-      suggestion = 'Go for a walk in the park.';
+      suggestion = suggestions.happy;
       break;
     case 'sad':
-      suggestion = 'Listen to your favorite music.';
+      suggestion = suggestions.sad;
       break;
     case 'anxious':
-      suggestion = 'Try some deep breathing exercises.';
+      suggestion = suggestions.anxious;
       break;
     case 'angry':
-      suggestion = 'Take a break and go for a run.';
+      suggestion = suggestions.angry;
       break;
     case 'stressed':
-      suggestion = 'Take a warm bath or shower.';
+      suggestion = suggestions.stressed;
       break;
     case 'tired':
-      suggestion = 'Take a nap or get some rest.';
+      suggestion = suggestions.tired;
       break;
     case 'excited':
-      suggestion = 'Plan a fun activity with friends or family.';
+      suggestion = suggestions.excited;
       break;
     case 'content':
-      suggestion = 'Take some time to relax and enjoy the moment.';
+      suggestion = suggestions.content;
       break;
     case 'other':
-      suggestion = 'Think about what makes you happy and do it.';
+      suggestion = suggestions.other;
       break;
   }
+console.log(suggestion)
+const suggestionOptions = suggestions[mood];
 
-  activitySuggestions.innerHTML = `<p class="text-gray-700 font-bold mb-2">Activity Suggestion:</p><p class="text-gray-700">${suggestion}</p>`;
+let suggestionList = '<ul class="list-disc pl-4">';
+
+suggestionOptions.forEach((option) => {
+  suggestionList += `<li class="text-gray-700">${option}</li>`;
+});
+
+suggestionList += '</ul>';
+
+const activitySuggestions = document.getElementById('activity-suggestions');
+activitySuggestions.innerHTML = `<p class="text-gray-700 font-bold mb-2">Activities Suggestion:</p>${suggestionList}`;
 });
 
 const saveButton = document.querySelector('button[type="submit"]');
@@ -44,10 +112,7 @@ saveButton.addEventListener('click', (event) => {
   event.preventDefault();
 
   const mood = moodSelect.value;
-  const notes = notesInput.value;
 
   localStorage.setItem('mood', mood);
-  localStorage.setItem('notes', notes);
 
-  alert('Mood and notes saved!');
 });
