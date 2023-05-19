@@ -73,12 +73,12 @@ In order to run this project you need:
 Clone this repository to your desired folder or download the Zip folder:
 
 ```
-https://github.com/Ochiengsteven/portfolio.git
+https://github.com/Ochiengsteven/mental-health-app.git
 ```
 
 - Navigate to the location of the folder in your machine:
 
-**``you@your-Pc-name:~$ cd Portfolio``**
+**``you@your-Pc-name:~$ cd mental-health-app``**
 
 ### Install
 
@@ -154,7 +154,7 @@ Give a ⭐️ if you like this project and how I managed to build it!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- Project for Power learn project Mental Health Awareness [Power learn project](https://powerlearnproject.org/) html & css module.
+- Project for [Power learn project](https://powerlearnproject.org/) Mental Health Awareness.
 - Thanks to the Power learn project team for the great support.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
