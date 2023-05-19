@@ -90,10 +90,7 @@ npm install
 
 ### Usage
 
-To run the project, follow these instructions:
-
-- After Cloning this repo to your local machine.
-- Open the `index.html` in your browser.
+- A video explaining how to use the web app [video](https://www.loom.com/share/12a5c7dd735b4b4a93879ba52d43b29d).
 
 ### Run tests
 
