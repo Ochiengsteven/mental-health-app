@@ -43,26 +43,18 @@ form select {
 
 li {
   background: #191b64;
+  font-size: 1.3rem;
   margin: 1rem;
   padding: 1.2rem;
   border-radius: 2.5rem;
   word-wrap: break-word;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   list-style: none;
+  text-align: center;
 }
 
 /* Activity Suggestions */
 #activity-suggestions {
   max-width: 600px;
   margin: 0 auto;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #c9b6d7;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
 }
