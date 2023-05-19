@@ -50,7 +50,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- You can find the website [here](https://ochiengsteven.github.io/awesome-books/)
+- You can find the website [here](https://ochiengsteven.github.io/mental-health-app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
