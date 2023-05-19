@@ -5,7 +5,7 @@
   }
 
 body{
-  background: linear-gradient(to top, #f2f4f6, #b1bfcd);
+  background: linear-gradient(to bottom right, #7ee8fa, #eec0c6);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -33,13 +33,22 @@ form label {
   margin-bottom: 0.5rem;
 }
 
-form select,
-form textarea {
+form select {
   border: 1px solid #cbd5e0;
   padding: 0.5;
   border-radius: 0.25rem;
   width: 100%;
   margin-bottom: 1rem;
+}
+
+li {
+  background: #191b64;
+  margin: 1rem;
+  padding: 1.2rem;
+  border-radius: 2.5rem;
+  word-wrap: break-word;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  list-style: none;
 }
 
 /* Activity Suggestions */
@@ -52,7 +61,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #bb8eac;
+  background-color: #c9b6d7;
   color: #fff;
   text-align: center;
   padding: 1rem;

@@ -40,22 +40,19 @@ const suggestions = {
         "Take a break: If possible, take a break from work or other responsibilities to give yourself time to rest and recharge.",
     ],
     excited: [
-        "Spend time in nature: Spending time outdoors can be calming and rejuvenating. Take a hike, go for a bike ride, or simply sit outside and enjoy the fresh air.",
-        "Get creative: Engage in a creative activity, such as painting, writing, or playing music.",
-        "Take a break: If possible, take a break from work or other responsibilities to give yourself time to rest and recharge.",
-        "Relax and unwind: Take a bubble bath, read a book, or watch a movie.",
+        "Take a dance class or join a dance group",
+        "Try a new adventure sport like bungee jumping or skydiving.",
+        "Attend a concert or festival",
+        "Plan a trip or vacation.",
     ],
     content: [
         "Spend time in nature: Spending time outdoors can be calming and rejuvenating. Take a hike, go for a bike ride, or simply sit outside and enjoy the fresh air.",
         "Get creative: Engage in a creative activity, such as painting, writing, or playing music.",
-        "Try some new activity: Take a cooking class, learn a new language, or try a new hobby.",
-        "Relax and unwind: Take a bubble bath, read a book, or watch a movie.",
+        "Volunteer for a cause you care about.",
+        "Spend time with loved ones, like having a picnic or game night",
     ],
     other: [
-        "Spend time in nature: Spending time outdoors can be calming and rejuvenating. Take a hike, go for a bike ride, or simply sit outside and enjoy the fresh air.",
-        "Get creative: Engage in a creative activity, such as painting, writing, or playing music.",
-        "Try some new activity: Take a cooking class, learn a new language, or try a new hobby.",
-        "Relax and unwind: Take a bubble bath, read a book, or watch a movie.",
+        "If you're feeling overwhelmed, try making a to-do list or breaking down tasks into smaller, manageable steps.",
     ],
 };
 
@@ -98,7 +95,7 @@ const suggestionOptions = suggestions[mood];
 let suggestionList = '<ul class="list-disc pl-4">';
 
 suggestionOptions.forEach((option) => {
-  suggestionList += `<li class="text-gray-700">${option}</li>`;
+  suggestionList += `<li class="text-white">${option}</li>`;
 });
 
 suggestionList += '</ul>';
