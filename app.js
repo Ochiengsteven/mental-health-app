@@ -1,5 +1,4 @@
 const moodSelect = document.getElementById('mood');
-const notesInput = document.getElementById('notes');
 const activitySuggestions = document.getElementById('activity-suggestions');
 const suggestions = {
     happy: [

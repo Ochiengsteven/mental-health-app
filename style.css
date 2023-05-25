@@ -42,7 +42,6 @@ form select {
 }
 
 li {
-  background: #191b64;
   font-size: 1.3rem;
   margin: 1rem;
   padding: 1.2rem;
@@ -51,6 +50,36 @@ li {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   list-style: none;
   text-align: center;
+}
+
+li:nth-child(3n+1) {
+  background: #5f7adb;
+}
+
+li:nth-child(3n+2) {
+  background: #a2b2ee;
+}
+
+li:nth-child(3n+3) {
+  background: #580ef6;
+}
+
+/* Suggestion List Animation */
+li, code {
+  opacity: 0;
+  transform: scale(0.5);
+  animation: fadeInAndScale 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInAndScale {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* Activity Suggestions */
